@@ -164,12 +164,23 @@
 								happy to help the fellow Python learners, albeit with my limited knowledge.
 								Feel free to reach out to me. Onwards and Upwards!!!.</p>
 
-							<form action="{{ url_for('receive_data') }}" method="post" >
+							<form action="{{ url_for('receive_data', _anchor='contact') }}" method="post" >
 								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="email" name="email" placeholder="Email" /></div>
+
+									{% with messages = get_flashed_messages() %}
+									{% if messages %}
+										{% for message in messages %}
+											<div style="color:#3a73b9;" class="col-12 col-12-mobile" role="alert">
+												{{ message }}
+											</div>
+										{% endfor %}
+									{% endif %}
+									{% endwith %}
+
+									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" required /></div>
+									<div class="col-6 col-12-mobile"><input type="email" name="email" placeholder="Email" required /></div>
 									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
+										<textarea name="message" placeholder="Message" required></textarea>
 									</div>
 									<div class="col-12">
 										<input type="submit" value="Send Message" />
