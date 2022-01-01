@@ -4,8 +4,9 @@ import logging
 import os
 from dotenv import load_dotenv  # pip install python-dotenv
 
-LOG_FORMAT = "%(levelname)s %(asctime)s -- %(message)s"
-logging.basicConfig(filename='portfolio_website.log', level=logging.INFO, format=LOG_FORMAT, filemode='a')
+# Logging into a file on the server
+# LOG_FORMAT = "%(levelname)s %(asctime)s -- %(message)s"
+# logging.basicConfig(filename='portfolio_website.log', level=logging.INFO, format=LOG_FORMAT, filemode='a')
 
 load_dotenv()
 
@@ -14,6 +15,11 @@ app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")  # read from .env file
 app.config['MY_EMAIL'] = os.environ.get("MY_EMAIL")
 app.config['MY_PASSWORD'] = os.environ.get("MY_PASSWORD")
 
+# https://logtail.com/tutorials/how-to-start-logging-with-heroku/
+# https://stackoverflow.com/questions/54297215/how-to-show-stdout-logs-in-heroku-using-flask
+gunicorn_logger = logging.getLogger('gunicorn.error')
+app.logger.handlers = gunicorn_logger.handlers
+app.logger.setLevel(gunicorn_logger.level)
 
 @app.route('/')
 def home():
