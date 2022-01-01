@@ -15,6 +15,7 @@ app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")  # read from .env file
 app.config['MY_EMAIL'] = os.environ.get("MY_EMAIL")
 app.config['MY_PASSWORD'] = os.environ.get("MY_PASSWORD")
 
+# Adding application logs to Heroku
 # https://logtail.com/tutorials/how-to-start-logging-with-heroku/
 # https://stackoverflow.com/questions/54297215/how-to-show-stdout-logs-in-heroku-using-flask
 gunicorn_logger = logging.getLogger('gunicorn.error')
