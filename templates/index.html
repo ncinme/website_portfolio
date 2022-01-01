@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<!--
+	This website is based on the Prologue template by HTML5 UP, under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>NCInMe</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<link rel="icon" href="static/images/favicon.ico">
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="static/images/AvatarMaker.png" alt="" /></span>
+							<h1 id="title">NC InMe</h1>
+							<p>Eternal Learner</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+<!--							<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>-->
+<!--							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>-->
+<!--							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
+							<li><a href="https://github.com/ncinme" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#contact" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">Hi! I'm <strong>NC InMe</strong>, a <a href="https://www.python.org/">Python</a> learner,<br />
+								undergoing a bootcamp designed by <a href="https://www.udemy.com/course/100-days-of-code/">The App Brewery</a>.</h2>
+								<p>This website highlights the list of projects<br />
+								showcasing my learning so far.</p>
+							</header>
+
+							<footer>
+								<a href="#portfolio" class="button scrolly">My Portfolio</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Portfolio</h2>
+							</header>
+
+							<p>There is no limit to learning. Learning is free (well almost) in today's interconnected
+								world. However, there is no substitute to hands-on coding while going through a learning
+								course. This section highlights the projects I have attempted so far.</p>
+							<div class="row">
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="https://github.com/ncinme/morse_code" target="_blank" class="image fit"><img src="static/images/morse3.jfif" alt="" /></a>
+										<header>
+											<h3>Morse Code Converter</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="static/images/pic02.jpg" alt="" /></a>
+										<header>
+											<h3>Project 4</h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="#" class="image fit"><img src="static/images/pic03.jpg" alt="" /></a>
+										<header>
+											<h3>Project 2</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="static/images/pic03.jpg" alt="" /></a>
+										<header>
+											<h3>Project 5</h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="#" class="image fit"><img src="static/images/pic02.jpg" alt="" /></a>
+										<header>
+											<h3>Project 3</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="static/images/pic02.jpg" alt="" /></a>
+										<header>
+											<h3>Project 6</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About Me</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="static/images/about2.jpg" alt="" /></a>
+
+							<p>One must commit to life-long learning. It is especially true if you want to build a
+								successful career in the software industry. I somehow survived, or dare I say thrived,
+								without writing a line of code for almost 22 years (I stopped coding after first 3 years
+								of my joining a software services company). The Pandemic, work from home, provided an
+								opportunity to invest time in learning something new
+								- hence my nom de plume - New Coder In Me 🙂.</p>
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p>Well, Homo sapiens outperformed all other species through collaboration. I would be very
+								happy to help the fellow Python learners, albeit with my limited knowledge.
+								Feel free to reach out to me. Onwards and Upwards!!!.</p>
+
+							<form action="{{ url_for('receive_data') }}" method="post" >
+								<div class="row">
+									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="col-6 col-12-mobile"><input type="email" name="email" placeholder="Email" /></div>
+									<div class="col-12">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; NCInMe. All rights reserved.</li><li>Design Credit: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
